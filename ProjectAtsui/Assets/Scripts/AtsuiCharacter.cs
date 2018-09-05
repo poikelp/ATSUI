@@ -13,6 +13,7 @@ public class AtsuiCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform_character = transform;
+		scale_character = transform_character.localScale;
 	}
 	
 	// Update is called once per frame
