@@ -39,8 +39,6 @@ public class AtsuiCharacter : MonoBehaviour {
 		scale_character.x -= growSpeed;
 		scale_character.z -= growSpeed;
 		
-		Debug.Log('a');
-
 		SizeCheck();
 	}
 
