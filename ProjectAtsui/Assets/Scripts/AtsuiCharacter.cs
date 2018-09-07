@@ -18,14 +18,15 @@ public class AtsuiCharacter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GrowUpCharacter());
+		float growthAmount = growSpeed * Time.deltaTime;
+		GrowUpCharacter(growthAmount);
 		ScaleUpdate();
 	}
 
 	//キャラクターを決められた値だけ大きくする
-	void GrowUpCharacter () {
-		scale_character.x += growSpeed;
-		scale_character.z += growSpeed;
+	void GrowUpCharacter (float growthAmount) {
+		scale_character.x += growthAmount;
+		scale_character.z += growthAmount;
 	}
 
 	//キャラクターの大きさを更新する
@@ -34,9 +35,9 @@ public class AtsuiCharacter : MonoBehaviour {
 	}
 
 	//キャラクターを決められた値だけ小さくする
-	void GrowDownCharacter () {
-		scale_character.x -= growSpeed * 2;
-		scale_character.z -= growSpeed * 2;
+	void GrowDownCharacter (float growthAmount) {
+		scale_character.x -= growthAmount * 2;
+		scale_character.z -= growthAmount * 2;
 		
 		SizeCheck();
 	}
