@@ -35,10 +35,12 @@ public class AtsuiCharacter : MonoBehaviour {
 	}
 
 	//キャラクターを決められた値だけ小さくする
-	void GrowDownCharacter (float growthAmount) {
-		scale_character.x -= growthAmount * 2;
-		scale_character.z -= growthAmount * 2;
+	public void GrowDownCharacter () {
+		scale_character.x -= growSpeed;
+		scale_character.z -= growSpeed;
 		
+		Debug.Log('a');
+
 		SizeCheck();
 	}
 
