@@ -22,11 +22,13 @@ public class PacificHigh : MonoBehaviour {
 		MoveHigh();
 	}
 
+	//時間経過に応じて東西に移動する
 	void MoveHigh () {
 		newPos.x = 11.0f + GetSinTime() * 5;
 		transform_this.position = newPos;
 	}
 
+	//時間に応じたサインを返す
 	float GetSinTime () {
 		return Mathf.Sin(Time.time);
 	}

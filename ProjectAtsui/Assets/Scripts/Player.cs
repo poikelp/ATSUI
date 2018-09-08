@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
 		
 	}
 
+	//クリックした場所に台風を出す
 	public void MakeTyphoon (){
 		Vector3 mousePos = Input.mousePosition;
 		mousePos.z = 10.0f;

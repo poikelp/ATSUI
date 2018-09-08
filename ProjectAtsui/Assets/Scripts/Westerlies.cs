@@ -22,11 +22,13 @@ public class Westerlies : MonoBehaviour {
 		MoveWesterlies();
 	}
 
+	//時間経過に応じて南北に移動する
 	void MoveWesterlies () {
 		newPos.y = 7.0f + GetSinTime() * 5;
 		transform_this.position = newPos;
 	}
 
+	//時間に応じたサインを返す
 	float GetSinTime () {
 		return Mathf.Sin(Time.time);
 	}
