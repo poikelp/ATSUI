@@ -51,4 +51,13 @@ public class Typhoon : MonoBehaviour {
 	void GoingNorth () {
 		velocity.y += goNothSpeed * Time.deltaTime;
 	}
+
+	void OnTriggerStay2D (Collider2D other) {
+		if(other.tag.Equals("High"))
+			EffectByHigh();
+	}
+
+	void EffectByHigh () {
+		
+	}
 }
