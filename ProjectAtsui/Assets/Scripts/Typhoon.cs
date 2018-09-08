@@ -57,7 +57,16 @@ public class Typhoon : MonoBehaviour {
 			EffectByHigh();
 	}
 
+	void OnTriggerExit2D(Collider2D other) {
+		if(other.tag.Equals("Ocean"))
+			ExitOcean();
+	}
+
+	void ExitOcean () {
+		Destroy(this.gameObject);
+	}
+
 	void EffectByHigh () {
-		
+
 	}
 }
