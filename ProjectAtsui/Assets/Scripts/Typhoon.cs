@@ -5,18 +5,25 @@ using UnityEngine;
 public class Typhoon : MonoBehaviour {
 
 	[SerializeField]
-	float growSpeed;
+	float speed_grow;
 	[SerializeField]
-	float spinSpeed;
+	float speed_spin;
 	[SerializeField]
-	float goNothSpeed;
+	float speed_goNoth;
+	[SerializeField]
+	float speed_westerlies;
+	
 
+	GameObject westerlies;
 	Transform transform_this;
+	Transform transform_westerlies;
 	Vector3 velocity;
 
 	// Use this for initialization
 	void Start () {
+		westerlies = GameObject.FindGameObjectWithTag("Westerlies");
 		transform_this = transform;
+		transform_westerlies = westerlies.transform;
 	}
 	
 	// Update is called once per frame
@@ -28,15 +35,16 @@ public class Typhoon : MonoBehaviour {
 	void FixedUpdate () {
 		ResetVelocity();
 		GoingNorth();
+		EffectByWesterlies();
 		PositionUpdate();
 	}
 
 	void GrowTyphoon () {
-		transform_this.localScale = transform_this.localScale * (1 + growSpeed * Time.deltaTime);
+		transform_this.localScale = transform_this.localScale * (1 + speed_grow * Time.deltaTime);
 	}
 
 	void SpinTyphoon () {
-		Vector3 torque = new Vector3(0, 0, spinSpeed * Time.deltaTime);
+		Vector3 torque = new Vector3(0, 0, speed_spin * Time.deltaTime);
 		transform_this.Rotate(torque);
 	}
 
@@ -49,7 +57,19 @@ public class Typhoon : MonoBehaviour {
 	}
 
 	void GoingNorth () {
-		velocity.y += goNothSpeed * Time.deltaTime;
+		velocity.y += speed_goNoth * Time.deltaTime;
+	}
+
+	void EffectByWesterlies () {
+		velocity.x += GetReciprocal(GetDistanceToWesterlies()) * speed_westerlies * Time.deltaTime;
+	}
+
+	float GetDistanceToWesterlies () {
+		return Mathf.Abs(transform_westerlies.position.y - transform_this.position.y) + 3;
+	}
+
+	float GetReciprocal (float num) {
+		return 1 / num;
 	}
 
 	void OnTriggerStay2D (Collider2D other) {
