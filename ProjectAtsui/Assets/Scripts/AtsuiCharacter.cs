@@ -2,15 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class AtsuiCharacter : MonoBehaviour {
+
+	[SerializeField]
+	private float growSpeed;
+	
+	private Vector3 scale_character;
+	private Transform transform_character;
 
 	// Use this for initialization
 	void Start () {
-		
+		transform_character = transform;
+		scale_character = transform_character.localScale;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		float growthAmount = growSpeed * Time.deltaTime;
+		GrowUpCharacter(growthAmount);
+		ScaleUpdate();
+	}
+
+	//キャラクターを決められた値だけ大きくする
+	void GrowUpCharacter (float growthAmount) {
+		scale_character.x += growthAmount;
+		scale_character.z += growthAmount;
+	}
+
+	//キャラクターの大きさを更新する
+	void ScaleUpdate () {
+		transform_character.localScale = scale_character;
+	}
+
+	//キャラクターを決められた値だけ小さくする
+	public void GrowDownCharacter () {
+		scale_character.x -= growSpeed;
+		scale_character.z -= growSpeed;
 		
+		SizeCheck();
+	}
+
+	//キャラクターの大きさがマイナスにならないように修正する
+	void SizeCheck () {
+		if(scale_character.x < 0)
+			scale_character.x = 0;
+		if(scale_character.z < 0)
+			scale_character.z = 0;
 	}
 }
