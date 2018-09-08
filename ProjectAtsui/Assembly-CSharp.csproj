@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PacificHigh.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Typhoon.cs" />
+     <Compile Include="Assets\Scripts\Westerlies.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/user/Desktop/github/ATSUI/ProjectAtsui/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
