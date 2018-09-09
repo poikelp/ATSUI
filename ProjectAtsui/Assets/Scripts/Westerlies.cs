@@ -30,6 +30,6 @@ public class Westerlies : MonoBehaviour {
 
 	//時間に応じたサインを返す
 	float GetSinTime () {
-		return Mathf.Sin(Time.time);
+		return Mathf.Sin((Time.time + 90) * Mathf.PI / 365  * 2 * 7);
 	}
 }

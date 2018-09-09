@@ -28,8 +28,7 @@ public class Typhoon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		SpinTyphoon();
-		GrowTyphoon();
+
 	}
 
 	void FixedUpdate () {
@@ -37,6 +36,8 @@ public class Typhoon : MonoBehaviour {
 		GoingNorth();
 		EffectByWesterlies();
 		PositionUpdate();
+		SpinTyphoon();
+		GrowTyphoon();
 	}
 
 	//台風を巨大化させる関数
