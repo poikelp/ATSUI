@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - High
   - Ocean
+  - Westerlies
   layers:
   - Default
   - TransparentFX
