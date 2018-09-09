@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50683703463280892}
   m_Layer: 0
   m_Name: Typhoon
-  m_TagString: Untagged
+  m_TagString: Typhoon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   speed_grow: 0.2
   speed_spin: 200
   speed_goNoth: 2
-  speed_westerlies: 5
+  speed_westerlies: 10
 --- !u!212 &212577603061975428
 SpriteRenderer:
   m_ObjectHideFlags: 1

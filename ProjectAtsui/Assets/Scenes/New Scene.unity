@@ -1343,6 +1343,7 @@ GameObject:
   - component: {fileID: 1155147299}
   - component: {fileID: 1155147298}
   - component: {fileID: 1155147297}
+  - component: {fileID: 1155147300}
   m_Layer: 0
   m_Name: Japan
   m_TagString: Untagged
@@ -1434,6 +1435,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 49.12}
+--- !u!114 &1155147300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155147296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82ad2eba184846f691b69fdef09753f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicScore: 50
+  scoreBoard: {fileID: 189240559}
 --- !u!1 &1647181156
 GameObject:
   m_ObjectHideFlags: 0

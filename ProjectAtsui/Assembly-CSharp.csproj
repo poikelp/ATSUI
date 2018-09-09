@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AtsuiCharacter.cs" />
      <Compile Include="Assets\Scripts\DayCounter.cs" />
+     <Compile Include="Assets\Scripts\Japan.cs" />
      <Compile Include="Assets\Scripts\PacificHigh.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
