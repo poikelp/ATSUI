@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\DayCounter.cs" />
      <Compile Include="Assets\Scripts\PacificHigh.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Title.cs" />
      <Compile Include="Assets\Scripts\Typhoon.cs" />
      <Compile Include="Assets\Scripts\Westerlies.cs" />
