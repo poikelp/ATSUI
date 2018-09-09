@@ -30,6 +30,6 @@ public class PacificHigh : MonoBehaviour {
 
 	//時間に応じたサインを返す
 	float GetSinTime () {
-		return Mathf.Sin(Time.time * 1000 / 360 * 7 / 365);
+		return Mathf.Sin((Time.time + 90) * Mathf.PI / 365  * 2 * 7);
 	}
 }
